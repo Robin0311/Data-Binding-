@@ -1,5 +1,11 @@
 import { Component } from '@angular/core';
 
+interface IArtist {
+  name: string,
+  shortname: string,
+  reknown: string,
+  bio: string
+}
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,7 +13,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   query: string;
-  artists: object;
+  artists: IArtist[];
 
   constructor() {
     this.query = 'Barot';
